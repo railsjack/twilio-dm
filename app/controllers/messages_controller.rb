@@ -31,7 +31,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
-        format.html { redirect_back fallback_location: root_path, notice: 'Message was successfully created.' }
+        format.html { redirect_back fallback_location: root_path, notice: 'Message was successfully sent.' }
         #format.html { redirect_to @message, notice: 'Message was successfully created.' }
         format.json { render :show, status: :created, location: @message }
       else
@@ -60,7 +60,8 @@ class MessagesController < ApplicationController
   def destroy
     @message.destroy
     respond_to do |format|
-      format.html { redirect_to messages_url, notice: 'Message was successfully destroyed.' }
+      format.html { redirect_back fallback_location: root_path, notice: 'Message was successfully destroyed.' }
+      #format.html { redirect_to messages_url, notice: 'Message was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

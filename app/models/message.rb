@@ -38,11 +38,31 @@ class Message < ApplicationRecord
   def filter_values
     self.from = from.remove(/[^\d]/)
     self.to = to.remove(/[^\d]/)
+    send_sms
   end
 
   def make_seen_true
     Message.where(to: to).each do |message|
       #message.update_attribute(:seen, true)
+    end
+  end
+
+  def send_sms
+    begin
+      account_sid = 'ACe2d52b50ed43b3a051bef93eb054448c'
+      auth_token = '91c561d841372ba6a85601306fe6f3fa'
+      @client = Twilio::REST::Client.new(account_sid, auth_token)
+      message = @client.messages
+                    .create(
+                        body: self.content,
+                        from: '+16179345175',
+                        #from: self.from,
+                        to: self.to
+                    )
+      self.sid = message.sid
+      self.result = message.to_s
+    rescue Twilio::REST::TwilioError => e
+      self.result = e.to_s
     end
   end
 

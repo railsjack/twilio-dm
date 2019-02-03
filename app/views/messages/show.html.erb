@@ -1,4 +1,9 @@
-<p id="notice"><%= notice %></p>
+<p>&nbsp;</p>
+<% unless notice.nil? %>
+  <div class="well well-sm">
+    <p id="notice"><%= notice %></p>
+  </div>
+<% end %>
 
 <p><%= link_to 'Back to Inbox', messages_path %></p>
 
@@ -19,6 +24,8 @@
     </td>
     <td>
       <%=@last_message.content %>
+      &nbsp;&nbsp;
+      <strong><%= link_to 'Delete', @last_message, method: :delete, class: 'text-danger', data: { confirm: 'Are you sure?' } %></strong>
     </td>
   </tr>
   <tr>
@@ -65,6 +72,8 @@
       </td>
       <td>
         <%=message.content %>
+        &nbsp;&nbsp;
+        <strong><%= link_to 'Delete', message, method: :delete, class: 'text-danger', data: { confirm: 'Are you sure?' } %></strong>
       </td>
     </tr>
   <% end %>
