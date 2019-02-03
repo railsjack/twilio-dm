@@ -2,14 +2,18 @@
 <p><br></p>
 <div class="center jumbotron">
   <h2>Welcome to the Simpe Message App</h2>
-  <div class="well well-sm">
-    <h4 class="text-center"><a target="_blank" href="https://www.screencast.com/t/EsaeqlI4e">
-      How does it work (Signup / Signin)</a>
-    </h4>
-    <h4 class="text-center"><a target="_blank" href="https://www.screencast.com/t/VZnzUDEU">
-      How does it work (Send SMS)</a></h4>
-    <h4 class="text-center"><a target="_blank" href="https://www.screencast.com/t/mgab8CTX">
-      How does it work (Setting up Webhook in order to capture incoming messages)</a></h4>
-  </div>
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  <ul class="list-group" style="list-style: decimal;">
+    <li class="list-group-item"><a target="_blank" href="https://www.screencast.com/t/EsaeqlI4e">
+      1. How does it work (Signup / Signin)</a>
+    </li>
+    <li class="list-group-item"><a target="_blank" href="https://www.screencast.com/t/VZnzUDEU">
+      2. How does it work (Sending SMS)</a></li>
+    <li class="list-group-item"><a target="_blank" href="https://www.screencast.com/t/mgab8CTX">
+      3. How does it work (Setting up Webhook in order to capture incoming messages)</a></li>
+    <li class="list-group-item"><a target="_blank" href="https://www.screencast.com/t/CnuOnax84Y">
+      4. How does it work (Sending message in this App)</a></li>
+  </ul>
+  <% if !logged_in2? %>
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
 </div>
