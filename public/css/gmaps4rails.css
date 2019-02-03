@@ -1,0 +1,28 @@
+div[map-example] {
+  /*min-height:350px;*/
+}
+
+.map {
+  height: 300px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.map img {
+  max-width: none;
+}
+
+.map label {
+  width: auto;
+  display:inline;
+}
+
+
+.custom_marker_content{
+  background: white;
+  width: 150px;
+}
+
+.custom_infowindow_content{
+  background: white;
+}

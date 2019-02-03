@@ -1,0 +1,53 @@
+<div hightlight=''>
+
+  <pre>
+    <span class="code-title">Javascript</span>
+    <code class="js">
+var handler = Gmaps.build('Google');
+handler.buildMap({ internal: {id: 'multi_overlays'}}, function(){
+
+
+  var circles = handler.addCircles(
+    [{ lat: 51, lng: -6, radius: 50000 }],
+    { strokeColor: '#FF0000'}
+  );
+
+  var polylines = handler.addPolylines(
+    [
+      [
+        {lat: 42, lng: -6},
+        {lat: 50, lng: -6}
+      ]
+    ],
+    { strokeColor: '#FF0000'}
+  );
+
+  var polygons = handler.addPolygons(
+    [
+      [
+        {lat:  48, lng: -3.5}, { lat: 51, lng: -0.5},
+        {lat:  48, lng:  2.5}, { lat: 51, lng:  5.5},
+        {lat:  48, lng:  8.5}, { lat: 42, lng:  2.5},
+      ]
+    ],
+    { strokeColor: '#FF0000'}
+  );
+
+  handler.bounds.extendWith(polylines);
+  handler.bounds.extendWith(polygons);
+  handler.bounds.extendWith(circles);
+  handler.fitMapToBounds();
+});
+    </code>
+  </pre>
+
+  <pre>
+    <span class="code-title">HTML</span>
+    <code class="html">
+&lt;div style='width: 800px;'&gt;
+  &lt;div id="multi_overlays" style='width: 800px; height: 400px;'&gt;&lt;/div&gt;
+&lt;/div&gt;
+    </code>
+  </pre>
+
+</div>

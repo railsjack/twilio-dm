@@ -1,0 +1,1063 @@
+<section class="php_pgN iso_pgN php_new hire-developers_mainN">
+  <div class="tec_banner_sec tec_banner_secNew">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+          <!-- <h1 class="wow fadeIn animated" data-wow-delay=".2s"> <span class="whitecolor">Using</span> PHP <span class="development wow fadeIn animated" data-wow-delay=".3s"> <span class="develop_before"></span> Web/Mobile Developer <span class="develop_after"></span> </span> </h1>
+          <p data-wow-delay=".3s" class="tec_des wow fadeIn   animated" style="visibility: visible; animation-delay: 0.3s;">Hire PHP Developers<sup style="font-size:12px;">TM</sup> and get exclusive, undivided attention on your projects. Hire my PHP developers on hourly or full time (dedicated monthly) basis. </p>
+          <ul class="wow fadeIn animated" data-wow-delay=".6s">
+            <li class="ios_icon1">100% Money Back Guarantee</li>
+            <li class="ios_icon2">On Time Delivery</li>
+            <li class="ios_icon3">Non-Disclosure Agreement</li>
+            <li class="ios_icon4">Better ROI</li>
+          </ul> -->
+          <!-- <div class="hirenow_button wow fadeInDown animated" data-wow-delay=".3s"> <a href="/contact" title=" contact me Now" class="ladda-button" data-style="slide-left"> MY PHP EXPERTS </a> </div> -->
+
+          <div class="left-box">
+            <h1>Save 50% Cost On Your Next Project <span>By Hiring  On-Demand Developers In India </span></h1>
+            <p>Looking for highly skilled offshore developers who can work like your extensive team? We are one of the
+              most preferred full stack software development companies from India with 450+ skilled &amp; experienced
+              developers to help businesses address their key technology challenges, enhance productivity and control
+              costs. Hire developers and programmers from us on hourly or full time (dedicated monthly) basis, to build
+              high performing, interactive and scalable apps.</p>
+            <ul class="list1">
+              <li class="icon1">100% Money Back Guarantee</li>
+              <li class="icon2">On Time Delivery</li>
+            </ul>
+            <ul class="list1 list2">
+              <li class="icon3">Non-Disclosure Agreement</li>
+              <li class="icon4">Better ROI</li>
+            </ul>
+          </div>
+          <div class="right-box">
+            <div class="form-outer">
+              <h2>Get In Touch</h2>
+              <!--form name="hire-developer-new-frm" id="hire-developer-new-frm" action="sendmail1.php"
+                    class="form-outer" method="post" enctype="multipart/form-data"-->
+              <%=form_for :contacts, html: {id: 'contact-frm', name: 'contact-frm', class: 'form-outer'} do |f| %>
+                <div class="input-field">
+                  <!--input type="text" name="hire-user-name" id="hire-user-name" placeholder="Name"-->
+                  <%=f.text_field :name, class: 'name', placeholder:'Name', maxlength: '100', id: 'hire-user-name',
+                                  onkeyup: "removeErrMsg(this.name)"%>
+                  <span class="icon icon1"><img src="common/images/man-iconN.png" alt=""></span>
+                  <span id="hire-user-name-err1" class="err"></span>
+                </div>
+
+                <div class="input-field">
+                  <%=f.text_field :email, class: 'email', placeholder:'Email', id: 'hire-user-email',
+                                  onkeypress: "removeErrMsg(this.name)", onkeyup: "removeErrMsg(this.name)" %>
+                  <span class="icon icon2"><img src="common/images/email-iconN.png" alt=""></span>
+                  <span id="hire-user-email-err" class="err"></span>
+
+                </div>
+
+                <div class="input-field">
+                  <%=f.text_field :phone, class: 'phone', placeholder:'Phone', id: 'hire-user-phone',
+                                  onkeypress: "removeErrMsg(this.name)", onkeyup: "removeErrMsg(this.name)" %>
+                  <span class="icon icon3"><img src="common/images/phone-iconN.png" alt=""></span>
+                  <span id="hire-user-phone-err" class="err"></span>
+                </div>
+                <div class="input-field">
+                  <div class="input-group hiredev-DDN" style="width:100%;">
+                    <span class="input-group-addon"> <i class="fa fa-usd"></i> </span>
+
+                    <%
+                      budget_collection =  [
+                          ['', 'What is your allocated budget?'],
+                          ['$5000 or less', '&lt;$5000'],
+                          ['$5000-$10000', '$5000-$10000'],
+                          ['$10000-$25000', '$10000-$25000'],
+                          ['$25000-$50000', '$25000-$50000'],
+                          ['$50000 or more', '&gt;$50000']
+                      ]
+                    %>
+                    <%=f.select :budget, options_for_select(budget_collection), {}, {class: 'citySelectze', id: 'hire-user-budget'} %>
+                  </div>
+                </div>
+
+                <div class="input-field">
+                  <!-- <input type="text" name="" placeholder="Your Requirements"> -->
+                  <textarea rows="2" cols="5" name="hire-user-req" id="hire-user-req">Your Requirements</textarea>
+                  <span class="icon icon4"><img src="common/images/requirmentl-iconN.png" alt=""></span>
+                  <span id="hire-user-message-err" class="err"></span>
+                </div>
+
+                <div class="left fileInputC input-field hiredev" style="display:none;">
+                  <!--<div id="uploadcontact">
+                      <div id="dropcontact">
+                          <label for="file-3">
+                              <span class="drop"><i class="fa fa-dropbox"></i> Browse  |  Drop files here  |  URL</span>
+                          </label>
+                          <input type="file" name="upl" id="file-3" class="inputfile inputfile-3" />
+                      </div>
+                  <ul></ul>
+                  </div>
+                  -->
+                  <div id="hireuploadcontact">
+                    <div id="hiredropcontact" style="padding: 0px !important;border: none !important;">
+                      <input type="file" name="hireupl" id="hirefile-3" style="width:30%">
+                      <p><span>Browse</span> |
+                        <span class="dropfile"><i class="fa fa-dropbox"></i> &nbsp;Drop files here</span> |
+                        <span onclick="showShareURL();"> URL</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="uplfilelist" style="display:none;">
+                  <ul></ul>
+                </div>
+                <div class="input-field" id="share_url" style="display:none;">
+                  <input type="text" class="form-control" placeholder="Share Url" name="customUrllink" id="user-url">
+                  <span id="hire-user-email-err" class="err"></span>
+                </div>
+                <div class="input-field no-bor" style="display: none;">
+                  <p class="type-fileT">Accepted file Formats: .PSD, .JPG, .JPEG, .GIF, .PNG, .AI, .ZIP, .RAR, .PDF,
+                    .DOC, .DOCX, .XLS, .XLSX, .PPT. If file size is greater than 20MB, please share using DropBox or
+                    similar.</p>
+                </div>
+
+                <div class="submitB">
+                  <a href="javascript:void(0);" id="submitHireDevFrm">
+                    <button id="submitHireDevFrm">SEND YOUR REQUEST</button>
+                  </a>
+                </div>
+                <input type="hidden" name="frmHireOrderFileUploadedfilename" id="frmHireOrderFileUploadedfilename" value=""/>
+                <input type="hidden" name="_frmOrder" value="frmOrder"/>
+                <input type="hidden" name="type" value="hire-developer-new-frm"/>
+                <input type="hidden" name="frmqueryString" id="frmqueryString" value="utm_source=blog&utm_medium=headerbanner&utm_campaign=home&amp;PageName=&amp;xForwordFor=&amp;deviceID=computer"/>
+
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="img_icon"> <img src="common/images/php_icon.png" alt="php ios developers" title="Dedicated php-developers" /> </div> -->
+  </div>
+
+  <section class="body_container" role="main">
+    <section class="hireNewtech-main">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="headingBox">
+              <h3>technologies</h3>
+              <p>My technology competency goes far beyond what is typically expected of “a full stack software developer
+                providing firm”. My long-established technology competencies are centered around</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default technology-heading-icon Mobile-app-listM ">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a class="arrowR" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <b>Mobile App Developers</b>
+                      <span>Hire developers for cross platform mobile application development.</span>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-android-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon1"></span>
+                            <h3>Hire Full Stack Android Developers</h3>
+                            <p>Get experienced & dedicated Android developers</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-augmented-reality-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon2"></span>
+                            <h3>Hire Augmented Reality Developers</h3>
+                            <p>Get full stack augmented reality application development services</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-ionic-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon3"></span>
+                            <h3>Hire Ionic Developers</h3>
+                            <p>Get Ionic mobile app development services</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-ios-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon4"></span>
+                            <h3>Hire iOS Developers</h3>
+                            <p>Experienced and certified iOS programmers</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-react-native-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon5"></span>
+                            <h3>Hire React Native Developers</h3>
+                            <p>Get React Native mobile app development services</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-swift-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon6"></span>
+                            <h3>Hire Swift Developers</h3>
+                            <p>Get dedicated Swift developers</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default technology-heading-icon Microsoft-app-listM">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a class="collapsed arrowR" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                      <b>microsoft technologies</b>
+                      <span>Hire developer for cross platform web/mobile app development on Microsoft technologies.</span>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-sm-4 text-center">
+                          <a href="javascript:;" data-href="hire-developers/hire-dotnet-developers">
+                            <div class="tech-innerM">
+                              <span class="icon icon1"></span>
+                              <h3>Hire .NET Developers</h3>
+                              <p>Certified Microsoft ASP.NET developers</p>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                          <a href="javascript:;" data-href="hire-developers/hire-sharepoint-developers">
+                            <div class="tech-innerM">
+                              <span class="icon icon2"></span>
+                              <h3>Hire SharePoint Developers</h3>
+                              <p>Experienced and certified SharePoint programmers</p>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                          <a href="javascript:;" data-href="hire-developers/hire-xamarin-developers">
+                            <div class="tech-innerM">
+                              <span class="icon icon3"></span>
+                              <h3>Hire Xamarin Developers</h3>
+                              <p>Custom Microsoft Xamarin development</p>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default technology-heading-icon Php-frmwrk-listM ">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                    <a class="collapsed arrowR" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                      <b>PHP & Frameworks</b>
+                      <span>Hire programmers for high end web application development with PHP & Frameworks.</span>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-php-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon4"></span>
+                            <h3>Hire PHP Developers</h3>
+                            <p>Custom PHP application development</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-symfony-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon5"></span>
+                            <h3>Hire Symfony Framework Developers</h3>
+                            <p>Create scalable web applications with Symfony</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-laravel-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon3"></span>
+                            <h3>Hire Laravel Framework Developers</h3>
+                            <p>Laravel PHP for web apps with robust features</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="row">
+
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-cakephp-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon1"></span>
+                            <h3>Hire Cake PHP Framework Developers</h3>
+                            <p>Experienced Cake PHP Framework programmers</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-codeigniter-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon2"></span>
+                            <h3>Hire Codeigniter Developers</h3>
+                            <p>Exceptional Codeigniter PHP framework programming</p>
+                          </div>
+                        </a>
+                      </div>
+
+
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-yii-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon6"></span>
+                            <h3>Hire Yii Framework Developers</h3>
+                            <p>Custom and robust Yii Framework development</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-zend-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon7"></span>
+                            <h3>Hire Zend Framework Developers</h3>
+                            <p>Dedicated PHP Zend framework developers</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default technology-heading-icon Cms-site-listM">
+                <div class="panel-heading" role="tab" id="headingFour">
+                  <h4 class="panel-title">
+                    <a class="collapsed arrowR" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                      <b>CMS Developers</b>
+                      <span>CMS is the new and easier way to build web apps. Hire developers for high quality web development. </span>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-drupal-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon1"></span>
+                            <h3>Hire Drupal Developers</h3>
+                            <p>Skilled and dedicated Drupal developers</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-cms-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon2"></span>
+                            <h3>Hire CMS Developers</h3>
+                            <p>Get CMS web development services</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-kentico-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon3"></span>
+                            <h3>Hire Kentico Developers</h3>
+                            <p>Exceptional Kentico CMS development</p>
+                          </div>
+                        </a>
+                      </div>
+
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-sitecore-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon4"></span>
+                            <h3>Hire Sitecore CMS Developers </h3>
+                            <p>Dedicated Sitecore CMS Developers</p>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-sitefinity-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon5"></span>
+                            <h3>Hire Sitefinity Developers</h3>
+                            <p>Get scalable Microsoft Sitefinity development services</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-umbraco-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon6"></span>
+                            <h3>Hire Umbraco Developers</h3>
+                            <p>Scalable Microsoft Umbraco development</p>
+                          </div>
+                        </a>
+                      </div>
+
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-wordpress-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon7"></span>
+                            <h3>Hire WordPress Developers</h3>
+                            <p>Hire experienced WordPress developers</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default technology-heading-icon Ecomm-site-listM">
+                <div class="panel-heading" role="tab" id="headingFive">
+                  <h4 class="panel-title">
+                    <a class="collapsed arrowR" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                      <b>E-commerce Developers</b>
+                      <span>Get dedicated eCommerce development teams for faster, robust and scalable online storefronts. </span>
+
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-magento-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon1"></span>
+                            <h3>Hire Magento Developers</h3>
+                            <p>Exceptional Magento eCommerce Development </p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-opencart-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon2"></span>
+                            <h3>Hire OpenCart Developers</h3>
+                            <p>Hire experienced OpenCart eCommerce developers </p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-prestashop-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon3"></span>
+                            <h3>Hire Prestashop Developers</h3>
+                            <p>Custom prestashop eCommerce development</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-woocommerce-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon4"></span>
+                            <h3>Hire WooCommerce Developers</h3>
+                            <p>Dedicated WooCommerce Development services</p>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-ecommerce-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon5"></span>
+                            <h3>Hire eCommerce Developers</h3>
+                            <p>Get eCommerce development services</p>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-shopify-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon6"></span>
+                            <h3>Hire shopify Developers</h3>
+                            <p>Get shopify development services</p>
+                          </div>
+                        </a>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default technology-heading-icon JavaScript-site-listM">
+                <div class="panel-heading" role="tab" id="headingSix">
+                  <h4 class="panel-title">
+                    <a class="collapsed arrowR" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                      <b>JavaScript</b>
+                      <span>Hire developers adept at JavaScript development for all kinds of front-end development projects.</span>
+
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-angularjs-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon1"></span>
+                            <h3>Hire AngularJS Developers</h3>
+                            <p>Hire experienced AngularJS developers</p>
+                          </div>
+                        </a>
+                      </div>
+                      <!-- <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-jquery-developers">
+                         <div class="tech-innerM">
+                          <span class="icon icon2"></span>
+                          <h3>Hire JQuery Developers</h3>
+                          <p>Skilled and dedicated JQuery developers</p>
+                        </div>
+                        </a>
+                      </div> -->
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-vuejs-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon8"></span>
+                            <h3>Hire Vue.js Developers</h3>
+                            <p>Dedicated vue.js developers</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-mean-stack-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon3"></span>
+                            <h3>Hire MEAN Stack Developers</h3>
+                            <p>Dedicated MEAN Stack developers</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-meteorjs-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon4"></span>
+                            <h3>Hire Meteor Developers</h3>
+                            <p>Exceptional MeteorJS development</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-nodejs-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon5"></span>
+                            <h3>Hire Node.js Developers</h3>
+                            <p>Custom Node.js web apps with robust features</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-reactjs-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon6"></span>
+                            <h3>Hire ReactJS Developers</h3>
+                            <p>Dedicated ReactJS developers</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <!-- <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-sencha-touch-developers">
+                        <div class="tech-innerM">
+                         <span class="icon icon7"></span>
+                         <h3>Hire Sencha Developers</h3>
+                         <p>Hire Sencha Touch developers</p>
+                         </div>
+                         </a>
+                      </div> -->
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default technology-heading-icon Others-site-listM">
+                <div class="panel-heading" role="tab" id="headingSeven">
+                  <h4 class="panel-title">
+                    <a class="collapsed arrowR" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                      <b>Others</b>
+                      <span>Hire programmers for all kinds of advanced data management, web &amp; mobile app development projects.My  Software developers help you for end-to-end solutions.</span>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-c-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon1"></span>
+                            <h3>Hire C/C++ developers</h3>
+                            <p>Custom C/C++ development services</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-apache-hadoop-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon2"></span>
+                            <h3>Hire Hadoop Developers</h3>
+                            <p>Hire skilled & experienced Hadoop developers</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-html-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon3"></span>
+                            <h3>Hire HTML5 Developers</h3>
+                            <p>Get experienced &amp; dedicated HTML5 developers</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-java-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon4"></span>
+                            <h3>Hire Java Developers</h3>
+                            <p>Exceptional Java/J2EE programming services</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-python-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon5"></span>
+                            <h3>Hire Python Developers</h3>
+                            <p>Scalable and performing Python web development</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-ror-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon6"></span>
+                            <h3>Hire RoR Developers</h3>
+                            <p>Dedicated RoR developers for scalable web apps</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-mobile-app-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon7"></span>
+                            <h3>Hire Mobile Developers</h3>
+                            <p>Experienced and certified mobile app programmers</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-software-developers-india">
+                          <div class="tech-innerM">
+                            <span class="icon icon8"></span>
+                            <h3>Hire Software Developers</h3>
+                            <p>Get Software development services</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-front-end-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon9"></span>
+                            <h3>Hire Front end Developers</h3>
+                            <p>Get dedicated front-end developers</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-web-app-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon10"></span>
+                            <h3>Hire Web Developers</h3>
+                            <p>Get experienced &amp; dedicated Web developers</p>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-api-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon11"></span>
+                            <h3>Hire API Developers</h3>
+                            <p>Get experienced &amp; dedicated API developers</p>
+                          </div>
+                        </a>
+                      </div>
+
+
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-blockchain-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon12"></span>
+                            <h3>Hire Blockchain developers </h3>
+                            <p>Get experienced &amp; dedicated Blockchain developers</p>
+                          </div>
+                        </a>
+                      </div>
+
+
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-ethereum-developer">
+                          <div class="tech-innerM">
+                            <span class="icon icon13"></span>
+                            <h3>Hire Ethereum Developers</h3>
+                            <p>Get experienced &amp; dedicated Ethereum developers</p>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-machine-learning-experts">
+                          <div class="tech-innerM">
+                            <span class="icon icon-ml"></span>
+                            <h3>Hire Machine Learning Experts </h3>
+                            <p>Get experienced &amp; dedicated Machine Learning experts</p>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="col-sm-4 text-center">
+                        <a href="javascript:;" data-href="hire-developers/hire-chatbot-developers">
+                          <div class="tech-innerM">
+                            <span class="icon icon-chat"></span>
+                            <h3>Hire Chatbot Developers</h3>
+                            <p>Get experienced &amp; dedicated Chatbot developers</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <style>
+      .hiredev-DDN .input-group-addon {
+        padding: 6px 3px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+        color: #cac6c6;
+        text-align: left;
+        background: transparent;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        border: none;
+      }
+
+      .hiredev-DDN .citySelectze {
+        width: 100%;
+        height: 50px;
+        background: url('common/images/downarrow_img.png') 98% center no-repeat;
+        border: none;
+        color: #f1f1f1;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+      }
+
+      .hiredev-DDN .citySelectze option {
+        background: #333c43;
+      }
+
+      .hiredev .dropfile {
+        border: 1px solid hsl(0, 0%, 24%) !important;
+        display: inline-block !important;
+        text-decoration: none !important;
+      }
+
+      .hiredev .dropcontact {
+        padding: 0px !important;
+        border: none !important;
+      }
+
+      .uplfilelist {
+        float: left;
+        width: 100%;
+      }
+
+      .uplfilelist ul {
+        margin: 0 !important;
+        float: left;
+        width: 100% !important;
+        text-align: left !important;
+        list-style: outside none none;
+        max-height: 80px;
+        overflow-y: auto;
+        background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+      }
+
+      .uplfilelist ul li {
+        background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+        margin: 0;
+        padding: 0 !important;
+      }
+
+      .uplfilelist ul li p {
+        display: inline;
+        font-size: 15px;
+        line-height: 38px;
+        margin: 0;
+        padding-left: 9px;
+        position: relative;
+        top: -9px;
+      }
+
+      .uplfilelist ul li i {
+        font-size: 15px;
+      }
+
+      .err {
+        color: red;
+        float: right;
+        margin-top: -32px;
+      }
+
+      @media (max-width: 500px) {
+        .citySelectze.form-control {
+          font-size: 13px !important;
+        }
+      }
+    </style>
+    <script>
+        function showShareURL() {
+            $("#share_url").show();
+            $("#label_share_url").hide();
+        }
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#contact_pdf_request").submit(function () {
+                var proceed = true;
+                //simple validation at client's end
+                //loop through each field and we simply change border color to red for invalid fields
+                $("#contact_form input[required=true]").each(function () {
+                    $(this).css('border-color', '');
+                    if (!$.trim($(this).val())) { //if this field is empty
+                        $(this).css({'border': '1px solid #FF0000', 'box-shadow': '0 0 5px red'}); //change border color to red
+                        proceed = false; //set do not proceed flag
+                    }
+                    //check invalid email
+                    var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+                    if ($(this).attr("type") == "email" && !email_reg.test($.trim($(this).val()))) {
+                        $(this).css({'border': '1px solid #FF0000', 'box-shadow': '0 0 5px red'}); //change border color to red
+                        proceed = false; //set do not proceed flag
+                    }
+                });
+
+                if (proceed) //everything looks good! proceed...
+                {
+
+                    //data to be sent to server
+                    var m_data = new FormData();
+                    m_data.append('user_name', $('#contact_form input[name=name]').val());
+                    m_data.append('user_email', $('#contact_form input[name=email]').val());
+                    m_data.append('company_name', $('#contact_form input[name=company_name]').val());
+
+                    if ($('#subscribe').is(':checked')) m_data.append('subscribe', 'Yes');
+                    else m_data.append('subscribe', 'No');
+
+                    //instead of $.post() I am using $.ajax()
+                    //that's because $.ajax() has more options and flexibly.
+                    $.ajax({
+                        url: 'common/inc/contact_me.php',
+                        data: m_data,
+                        processData: false,
+                        contentType: false,
+                        type: 'POST',
+                        dataType: 'json',
+                        success: function (response) {
+                            $('#contact_form input[name=name]').val('').css({
+                                'border': '1px solid #cfcfcf',
+                                'box-shadow': 'none'
+                            });
+                            $('#contact_form input[name=email]').val('').css({
+                                'border': '1px solid #cfcfcf',
+                                'box-shadow': 'none'
+                            });
+                            $('#contact_form input[name=company_name]').val('').css({
+                                'border': '1px solid #cfcfcf',
+                                'box-shadow': 'none'
+                            });
+                            $('#subscribe').prop('checked', false);
+
+                            //load json data from server and output message
+                            if (response.type == 'error') { //load json data from server and output message
+                                output = '<div class="error">' + response.text + '</div>';
+                            } else {
+                                $('.contact-description').addClass('hide-me').hide();
+                                $('#contact_body').addClass('hide-me').hide();
+                                output = '<div class="success">' + response.text + '</div>';
+                            }
+                            $("#contact_form #contact_results").hide().html(output).slideDown();
+                        }
+                    });
+
+
+                }
+            });
+
+            //reset previously set border colors and hide all message on .keyup()
+            $("#contact_form  input[required=true]").keyup(function () {
+                $(this).removeAttr("style");
+                //$(".success, .error").slideUp();
+            });
+        });
+    </script>
+
+    <div class="pop-up-box">
+      <div class="pop-up">
+        <span class="popup_cross"></span>
+        <div class="pop-up-sec">
+          <div class="pop-up-left">
+            <p>ValueCoders goes much beyond the regular hiring of offshore teams. The clients are insured that their
+              projects will never slow down. The stability of teams provided by ValueCoders is unmatched as we provide
+              free immediate replacement of teams in case of any dissatisfaction whatsoever.</p>
+            <ul>
+              <li>Minimum optimum productivity guaranteed</li>
+              <li>Get billed only if the performance is up to the mark</li>
+              <li>Hire and review first and then move forward</li>
+            </ul>
+          </div>
+          <div class="pop-up-right">
+            <img src="common/images/popup_img1.png" alt="Billing Gaurantee- Logo - 1"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pop-up-box1">
+      <div class="pop-up">
+        <span class="popup_cross"></span>
+        <div class="pop-up-sec">
+          <div class="pop-up-left">
+            <p>Here we provide people who are passionate about their work. ValueCoders ensures you 100% satisfaction
+              guarantee every single time. The professional are chosen on the basis of their ability to outperform their
+              tasks. We make sure, each of the personnel go through rigorous tests before coming on-board.</p>
+            <ul>
+              <li>Highly productive and qualified teams</li>
+              <li>On-time project deliveries</li>
+              <li>A collaborative and happy work culture</li>
+            </ul>
+          </div>
+          <div class="pop-up-right">
+            <img src="common/images/popup_img2.png" alt="Satisfaction Gaurantee- Logo - 2"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pop-up-box2">
+      <div class="pop-up">
+        <span class="popup_cross"></span>
+        <div class="pop-up-sec">
+          <div class="pop-up-left">
+            <ul>
+              <li>
+						<span class="popup_icon popup_icon1">
+
+						</span>
+                Take a free trial of your development work, for a period of 2 weeks
+              </li>
+              <li>
+						<span class="popup_icon popup_icon2">
+
+						</span>
+                Billing will be done after you are satisfied and decide to continue
+              </li>
+              <li>
+						<span class="popup_icon popup_icon3">
+
+						</span>
+                No bill will be raised if you do-not wish to continue
+              </li>
+            </ul>
+          </div>
+          <div class="get-touch">
+            <a href="request-free-trial" title="Get In Touch">Request a free Trial</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pop-up-box3">
+      <div class="pop-up">
+        <span class="popup_cross"></span>
+        <div class="pop-up-sec">
+          <div class="pop-up-right">
+            <img src="common/images/popup3_img.jpg" alt="Outsource - Logo - 2"/>
+          </div>
+          <div class="pop-up-left">
+            <p class="contact-description">The cost advantages of outsourcing can be huge if it is executed with a long
+              term plan in mind. Short term tactical hiring of remote teams may not bring fruitful results for the
+              outsourcing customer. This E-book details out the challenges, solutions and strategies to better
+              outsourcing.</p>
+            <div class="form-style" id="contact_form">
+              <div id="contact_results"></div>
+              <div id="contact_body">
+                <form name="contact_pdf_request" id="contact_pdf_request" method="post" onSubmit="return false;">
+                  <input type="text" placeholder="Contact Name" name="name" id="name" required="required" class="input-field"/>
+                  <input type="email" placeholder="Email" name="email" required="required" class="input-field"/>
+                  <input type="text" placeholder="Company Name" name="company_name" class="input-field"/>
+                  <label class="contct_checkbox" for="subscribe">
+                    <input type="checkbox" id="subscribe" name="subscribe" class="input-field input-checkbox" value='1'/>
+                    <span class="label-text">&nbsp;&nbsp;Subscribe to my Newsletters, Updates &amp; Offers</span>
+                  </label>
+                  <input type="submit" id="submit_btn" value="Get Download Link" data-style="slide-left"/>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+</section>

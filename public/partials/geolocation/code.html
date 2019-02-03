@@ -1,0 +1,30 @@
+<div hightlight=''>
+  <pre>
+    <span class="code-title">Javascript</span>
+    <code class="js">
+var handler = Gmaps.build('Google');
+handler.buildMap({ internal: {id: 'geolocation'} }, function(){
+  // be aware chrome >= 50 requires https for geolocation to work
+  if(navigator.geolocation)
+    navigator.geolocation.getCurrentPosition(displayOnMap);
+});
+
+function displayOnMap(position){
+  var marker = handler.addMarker({
+    lat: position.coords.latitude,
+    lng: position.coords.longitude
+  });
+  handler.map.centerOn(marker);
+};
+    </code>
+  </pre>
+
+  <pre>
+    <span class="code-title">HTML</span>
+    <code class="html">
+  &lt;div style='width: 800px;'&gt;
+    &lt;div id="geolocation" style='width: 800px; height: 400px;'&gt;&lt;/div&gt;
+  &lt;/div&gt;
+    </code>
+  </pre>
+</div>

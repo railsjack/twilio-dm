@@ -1,0 +1,10 @@
+<style>
+  .error, .danger{
+    color: red;
+  }
+</style>
+<% if flash.any? %>
+  <% flash.each do |key, msg| %>
+    <span class="alert <%=key %>"><%= msg %></span>
+  <% end %>
+<% end %>
