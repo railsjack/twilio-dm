@@ -21,7 +21,7 @@
                 <span class="form_info_icon">
                     <i class="fa fa-user"></i>
                 </span>
-                <%= f.text_field :email, id: 'user-email', class: 'email',
+                <%= f.text_field :email, id: 'user-email', class: 'form-control email',
                                  placeholder: 'Email', onkeyup: 'removeErrMsg(this.name)' %>
                 <span id="user-email-err1"></span>
               </div>
@@ -30,7 +30,7 @@
                     <i class="fa fa-key"></i>
                 </span>
                 <%= f.password_field :password, id: 'user-password',
-                                     placeholder: 'Password', class: 'password', onkeyup: 'removeErrMsg(this.name)' %>
+                                     placeholder: 'Password', class: 'form-control password', onkeyup: 'removeErrMsg(this.name)' %>
                 <span id="user-password-err1"></span>
               </div>
 

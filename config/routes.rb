@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   get  'logout', to: 'sessions#destroy'
   delete  'logout', to: 'sessions#destroy'
 
+  get 'signup', to: 'users#new'
+  post 'signup', to: 'users#create'
+
   get 'contact', to: 'contacts#new'
   get 'portfolio', to: 'case_studies#index'
   get 'case-studies/hr'

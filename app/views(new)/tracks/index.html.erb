@@ -1,0 +1,31 @@
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<p id="notice"><%= notice %></p>
+
+<h1>Tracks</h1>
+
+<table width="100%" border="1">
+  <thead>
+    <tr>
+      <th>Ip</th>
+      <th>Headers</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tracks.each do |track| %>
+      <tr>
+        <td><%= track.ip %></td>
+        <td><%= track.created_at %></td>
+        <td><pre style="width: 1000px; overflow-x: auto;"><%= track.headers %></pre></td>
+        <td><%= link_to 'Show', track %></td>
+        <td><%= link_to 'Edit', edit_track_path(track) %></td>
+        <td><%= link_to 'Destroy', track, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Track', new_track_path %>

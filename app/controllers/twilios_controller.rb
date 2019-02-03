@@ -53,11 +53,13 @@ class TwiliosController < ApplicationController
   def recv_sms
     message = params['Body']
     @result = SmsMailer.with({message: message} ).reply.deliver_now
-
+    # As soon as you receive sms, you can also get email as well, and we can
+    # save it into our database.
     @log = "Started
       sending email: #{@result}
     "
     render layout: nil
+
   end
 
   def recv_sms_test

@@ -1,0 +1,49 @@
+<style>
+  html, body, .outer_layout, .outer_wrapper_new, .php_pgN, .tec_banner_sec, .body_container {
+    height: 100%;
+    overflow: hidden;
+  }
+
+</style>
+<section class="contact1_page php_pgN iso_pgN php_new hire-developers_mainN">
+
+  <div class="tec_banner_sec tec_banner_secNew">
+    <section class="body_container " role="main">
+      <div class="container">
+        <div class="row">
+          <div class="center-block col-lg-5 col-md-5 col-sm-5 col-xs-12"
+               style="float: none;">
+            <%= form_for(:session, url: login_path, html: {class: 'form-outer',
+                                                           style: "backgroundd-color: rgba(0,0,0,.4)"}) do |f| %>
+              <h3 style="color: white; font: 28px/79px aller_lightregular;">LOG IN</h3>
+              <%= render 'flash_messages' %>
+              <div class="form_info">
+                <span class="form_info_icon">
+                    <i class="fa fa-user"></i>
+                </span>
+                <%= f.text_field :email, id: 'user-email', class: 'email',
+                                 placeholder: 'Email', onkeyup: 'removeErrMsg(this.name)' %>
+                <span id="user-email-err1"></span>
+              </div>
+              <div class="form_info">
+                <span class="form_info_icon">
+                    <i class="fa fa-key"></i>
+                </span>
+                <%= f.password_field :password, id: 'user-password',
+                                     placeholder: 'Password', class: 'password', onkeyup: 'removeErrMsg(this.name)' %>
+                <span id="user-password-err1"></span>
+              </div>
+
+              <div class="request-outer">
+                <%= f.submit 'Log in', class: 'btn btn-success btn-block' %>
+                <BR>
+              </div>
+
+            <% end %>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>

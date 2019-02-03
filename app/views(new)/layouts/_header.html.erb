@@ -1,0 +1,177 @@
+<style>
+  .header_new .menu_new li .sub_menu_new .hire_devl li a.ionic,
+  .header_new .menu_new li .sub_menu_new .hire_devl li:hover a.ionic {
+    background-position: 0 -2206px;
+    border-bottom: 0 solid #d7d7d7;
+  }
+
+  .site-slogan {
+    color: white;
+    font-size: 20pt !important;
+  }
+
+  @media screen and (max-width: 1280px) {
+    .site-slogan {
+      font-size: 15pt !important;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .site-slogan {
+      font-size: 10pt !important;
+    }
+  }
+
+  @media screen and (max-width: 810px) {
+    .site-slogan {
+      font-size: 10pt !important;
+      line-height: 0 !important;
+      display: block !important;
+      /* float: left; */
+      height: 15px !important;
+      margin-top: -10px !important;
+    }
+    .header_new .menu_new .hire_dvl_list{
+      margin-left: 0px;
+    }
+    .header_new .menu_new li .sub_menu_new .sub-menu-list li a,
+    .header_new .menu_new li .sub_menu_new .hire_devl li a{
+      background-position-x: -10px!important;
+    }
+    .header_new .menu_new li .sub_menu_new .hire_devl li .laravel,
+    .header_new .menu_new li .sub_menu_new .hire_devl li .ror
+    {
+      background-position-x: 7px!important;
+
+    }
+    .header_new .menu_new{
+      left: 90px!important;
+    }
+  }
+</style>
+<script>
+
+    $(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 500) {
+                $('.logo img').attr('src', '/logo.png?v1');
+            }
+            if ($(this).scrollTop() < 500) {
+                $('.logo img').attr('src', '/logo.png?v1');
+            }
+        });
+    });
+
+</script>
+<header class="header_new" role="banner">
+  <div class="container" style="background-color: rgba(0,0,0,0.3);">
+    <div class="row">
+      <div class="col-xs-12 col-sm-3 col-lg-2 col-md-2">
+        <a href="/" class="logo" title="WebMobile"><img src="/logo.png" org-src="common/images/VC-Log-1.png?v1" alt="Dedicated - Logo"/></a>
+        <span class="mob_icon2"></span>
+      </div>
+      <div class="col-xs-12 col-sm-9 col-lg-10 col-md-10">
+        <span class="site-slogan" style="color: white;font-size: 20pt;line-height: 70px;
+            display: block; float: left;height: 70px;">
+          Michael Jones
+        </span>
+        <ul class="menu_new">
+          <% if logged_in? %>
+            <li class="menu_arrow menu_arrowhire">
+              <a href="javascript:void(0)" id="bmob_main_hire_manu" title="Developers">Skills</a>
+              <div class="sub_menu_new hire_dvl_list">
+                <ul class="sub-menu-list hire_devl">
+                  <li><a class="laravel" title="Laravel" href="/skills/laravel">Laravel</a></li>
+                  <li><a class="codeigniter" title="CodeIgniter" href="/skills/codeigniter"
+                         style="background-position-y: -10px;">CodeIgniter</a></li>
+                  <!--li><a class="symphoney" title="Symfony" href="/skills/symfony">Symphony</a></li-->
+                  <li><a class="rectnative" title="React Native" href="/skills/reactnative">React Native</a></li>
+                  <!--li><a class="android" title="Android" href="/skills/android">Android</a></li-->
+                  <li><a class="nodejs" href="/skills/nodejs" title="Node JS">Node.JS</a></li>
+                  <li><a class="ios" href="/skills/swift" title="Swift">Swift</a></li>
+                  <!--li><a class="ios" href="/skills/ios" title="IOS">iOS</a></li-->
+                  <li><a class="angularjs" href="/skills/angularjs" title="Angular JS">AngularJS</a></li>
+                  <li><a class="ror" href="/skills/ror">Ruby on Rails</a></li>
+                  <li><a class="vue" href="/skills/vuejs">VueJS</a></li>
+                  <li><a class="reactjs" href="/skills/reactjs">ReactJS</a></li>
+                  <li><a class="ionic" href="javascript:;">Ionic</a></li>
+                  <li><a class="ionic" href="/geocoder4rails">Google Map</a></li>
+
+
+                </ul>
+                <div class="mgt-top text-center"><a class="btn btn-box" href="/skills">View All</a></div>
+              </div>
+            </li>
+            <li class="menu_arrow">
+              <a href="javascript:void(0)" id="amob_main_service_manu" title="Services">Experiences</a>
+              <div class=" sub_menu_new srv-list">
+                <ul class="sub-menu-list services">
+                  <li class="first">
+                    <a href="/application-development" title="Application Development" class="app-dvl">Web & Mobile
+                      Application</a></li>
+                  <li><a href="/application-maintenance" title="Application Maintenance" class="app-mnt">Application
+                    Maintenance</a></li>
+                  <li><a href="/application-modernization" title="Application Modernization" class="app-modz">Application
+                    Modernization</a></li>
+                  <li><a href="/testing-qa" title="Testing & QA" class="testing-qa">Testing &amp; QA</a></li>
+                  <li><a href="/co-development" title="Co-Development" class="co-devlpmt">Co-Development</a></li>
+                  <li class="last">
+                    <a href="/dedicated-development-teams" title="Dedicated Development" class="ded-devlpmt">Dedicated
+                      Development Teams</a></li>
+                </ul>
+              </div>
+            </li>
+            <!--li class="menu_arrow menu_arrowhire sub_menu_inds"> <a href="javascript:void(0)" id="cmob_main_hire_manu" title="Industries">Industries</a>
+              <div class="sub_menu_new indri_list">
+                <ul class="sub-menu-list indri">
+                  <li><a class="health" title="Healthcare" href="/industries/healthcare">Healthcare</a></li>
+                  <li><a class="retail" title="Retail & eCommerce" href="/industries/retail">Retail & eCommerce</a></li>
+                  <li><a class="digital" title="Digital & Marketing Agencies"href="/industries/digital">Digital & Marketing Agencies</a></li>
+                  <li><a class="logistics" href="/industries/logistics" title="logistics-transportation-software-development">Logistics & Transportation</a></li>
+                  <li><a class="media_1" title="Media & Entertainment" href="/industries/media"> Media & Entertainment</a></li>
+                  <li><a class="travel" title="Travel & Tourism" href="/industries/travel">Travel & Tourism</a></li>
+                </ul>
+
+              </div>
+            </li-->
+            <li class="no-arrow"><a title="Case Studies" href="/portfolio/"> Portfolio</a></li>
+            <li class="menu_arrow" style="display: none;">
+              <a href="#" id="mob_main_about_manu" title="Company">Company</a>
+              <div class="sub_menu_new company-outer">
+                <ul class="sub-menu-list company">
+                  <li class="first"><a title="About US" href="about">
+                    <img class="cmpny_iconh" alt="About Us" src="common/images/about_us.png"/>
+                    <img class="cmpny_icon" src="common/images/about_us_hover.png" alt="Outsourcing"/> About US</a></li>
+                  <!--<li><a title="How It Works" href="process">
+                                              <img class="cmpny_iconh" alt="How It Works" src="common/images/how_it_worksM.svg" />
+                                              <img class="cmpny_icon" src="common/images/how_it_works.svg" alt="24" >
+                                              How It Works</a></li>-->
+
+                  <li><a title="Blog" href="blog/" target="_blank">
+                    <img class="cmpny_iconh" alt="Blog" src="common/images/blog.png"/>
+                    <img class="cmpny_icon" src="common/images/blog_hover.png" alt="BLOG"/> Blog</a></li>
+                  <li><a class="faq-menu" title="FAQ's" href="faq">
+                    <img class="cmpny_iconh" alt="FAQ" src="common/images/FAQ.png"/>
+                    <img class="cmpny_icon" src="common/images/FAQ_hover.png" alt="FAQ"/> FAQ</a></li>
+                  <li><a class="testml-menu" title="CLIENT TESTIMONIALSs" href="testimonials">
+                    <img class="cmpny_iconh" alt="CLIENT TESTIMONIALSs" src="common/images/testimonial-icon.png"/>
+                    <img class="cmpny_icon" src="common/images/testimonial_hover.png" alt="CLIENT TESTIMONIALSs"/>
+                    CLIENT
+                    TESTIMONIALS</a></li>
+                  <!--<li><a class="cases-menu" title="Case Studies" href="case-studies/"> <img class="cmpny_iconh" alt="Case Studies" src="common/images/case_study.png" /> <img class="cmpny_icon" src="common/images/case_study_hover.png" alt="Case Studies" /> Case Studies</a></li>-->
+                  <li class="last"><a class="approach-menu" title="approach" href="our-approach">
+                    <img class="cmpny_iconh" alt="approach" src="common/images/approach.png"/>
+                    <img class="cmpny_icon" src="common/images/approach_hover.png" alt="approach"/> Approach</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="contact_us"><a href="/contact" title="Contact" class="contact_last">Contact</a></li>
+            <!--li class="no-arrow"><a href="/logout" title="Contact" class="">Log out</a></li-->
+          <% else %>
+            <li class="contact_us"><a href="/login" title="Contact" class="contact_last">Log in</a></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>

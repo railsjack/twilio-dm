@@ -1,0 +1,267 @@
+<style>
+  .browse-f {
+    display: none;
+  }
+
+  .provide-url {
+    display: none;
+  }
+
+  .chk-brw .brws_file {
+    padding-bottom: 0 !important;
+  }
+
+
+  .form-outer .form_info .country.error {
+    border: 2px solid red;
+  }
+
+  .contact1_page .form-outer .txt-area textarea {
+    box-shadow: none;
+  }
+
+  @media only screen and (max-width: 479px) {
+    .contact1_page .form_info .country.error, .contact1_page .form_info input.error[type="text"], .contact1_page .form_info textarea.error {
+      border: 2px solid red;
+    }
+
+    .contact1_page .form_info #user-name-err1, .contact1_page .form_info #user-email-err, .contact1_page .form_info #user-country-err, .contact1_page .form_info #user-phone-err, .contact1_page .form_info #user-message-err {
+      display: none;
+    }
+  }
+</style>
+<script type="text/javascript">
+    function valueChanged() {
+        if ($('#checkboxG1').is(":checked"))
+            $(".browse-f").show();
+        else
+            $(".browse-f").hide();
+    }
+
+    function valueChanged1() {
+        if ($('#checkboxG2').is(":checked"))
+            $(".provide-url").show();
+        else
+            $(".provide-url").hide();
+    }
+</script>
+<section class="contact1_page">
+  <div class="banner_sec banner_con">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <h1><span>Contact</span> ME</h1>
+          <p>Request a free consultation and get a no obligation quote for your project within 8 business hours</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="body_container" role="main">
+    <div class="get_outer">
+      <div class="container">
+        <!--form name="contact-frm" id="contact-frm" action="sendmail1.php" class="form-outer" method="post" enctype="multipart/form-data"-->
+        <%= form_for @contact, html: {id: 'contact-frm', name: 'contact-frm', class: 'form-outer'} do |f| %>
+          <input type="hidden" name="type" value="contact-frm"/>
+          <input type="hidden" name="frmqueryString" id="frmqueryString" value="&amp;PageName=&amp;xForwordFor=&amp;deviceID=computer"/>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="form_info">
+                <span class="form_info_icon">
+                    <i class="fa fa-user"></i>
+                </span>
+                <!--input type="text" class="name" placeholder="Name" maxlength="100" name="user-name" id="user-name"
+                  onkeyup="removeErrMsg(this.name)"-->
+                <%=f.text_field :name, class: 'name', placeholder:'Name', maxlength: '100', id: 'user-name',
+                                onkeyup: "removeErrMsg(this.name)"%>
+                <span id="user-name-err1"></span>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="form_info">
+                  <span class="form_info_icon">
+                      <i class="fa fa-envelope"></i>
+                  </span>
+                <!--input type="text" class="email" placeholder="Email" maxlength="100" name="user-email" id="user-email"
+                  onkeypress="isNumberKey(this)" onkeyup="removeErrMsg(this.name)"-->
+                <%=f.text_field :email, class: 'email', placeholder:'Email', id: 'user-email',
+                                onkeypress: "removeErrMsg(this.name)", onkeyup: "removeErrMsg(this.name)" %>
+                <span id="user-email-err"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+
+
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="form_info">
+                <span class="form_info_icon">
+                    <i class="fa fa-phone"></i>
+                </span>
+                <!--input type="text" class="phone" placeholder="Phone" maxlength="100" name="user-phone" id="user-phone"
+                       onkeyup="removeErrMsg(this.name)"-->
+                <%=f.text_field :phone, class: 'phone', placeholder:'Phone', id: 'user-phone',
+                                onkeypress: "removeErrMsg(this.name)", onkeyup: "removeErrMsg(this.name)" %>
+                <span id="user-phone-err"></span>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="form_info formChide">
+                <span class="form_info_icon">
+                    <i class="fa fa-dollar"></i>
+                </span>
+                <div class="country budget">
+                  <!--select id="user-budget" name="user-budget">
+                    <option value="">What is your allocated budget?</option>
+                    <option value="$5000 or less">&lt;$5000</option>
+                    <option value="$5000-$10000">$5000-$10000</option>
+                    <option value="$10000-$25000">$10000-$25000</option>
+                    <option value="$25000-$50000">$25000-$50000</option>
+                    <option value="$50000 or more">&gt;$50000</option>
+                  </select-->
+                  <%
+                    budget_collection =  [
+                        ['', 'What is your allocated budget?'],
+                        ['$5000 or less', '&lt;$5000'],
+                        ['$5000-$10000', '$5000-$10000'],
+                        ['$10000-$25000', '$10000-$25000'],
+                        ['$25000-$50000', '$25000-$50000'],
+                        ['$50000 or more', '&gt;$50000']
+                    ]
+                  %>
+                  <%=f.select :budget, options_for_select(budget_collection), {class: 'phone', id: 'user-budget'} %>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="form_info margin_bottom txt-area">
+					            <span class="form_info_icon">
+					                <i class="fa fa-list-ul"></i>
+					            </span>
+                <!--textarea name="user-req" id="user-req" placeholder="Your
+                  Requirements" required onkeyup="removeErrMsg(this.name)"></textarea-->
+                <%=f.text_area :req, id: 'user-req', placeholder: 'Your Requirements', required: true,
+                               onkeyup: 'removeErrMsg(this.name)' %>
+                <span id="user-message-err"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <!--div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+              <div class="chk-brw formChide">
+                <div class="form_info ">
+                  <input type="checkbox" name="checkboxG1" id="checkboxG1" class="css-checkbox" onchange="valueChanged()"/>
+                  <label for="checkboxG1" class="css-label">I would like to upload file</label>
+                </div>
+                <div class="browse-f">
+                  <div id="uploadcontact">
+                    <div id="dropcontact">
+                      <label for="file-3">
+                        <img src="common/images/browse-file.png" alt="">
+                        <span class="brose_here">Browse File |</span>
+                        <span class="drop_here">Drop Here</span>
+                      </label>
+                      <input type="file" name="upl" id="file-3" class="inputfile inputfile-3"/>
+                    </div>
+                    <ul>
+                    </ul>
+                  </div>
+                  <div class="file-format">
+                    <p>Accepted file Formats: .PSD, .JPG, .JPEG, .GIF, .PNG, .AI, .ZIP, .RAR, .PDF<br/>
+                      if the size is greater than 20MB, specify the URL here</p>
+                  </div>
+                </div>
+              </div>
+            </div-->
+
+            <!--div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="chk-brw formChide">
+                <div class="form_info">
+                  <input type="checkbox" name="checkboxG2" id="checkboxG2" class="css-checkbox" onchange="valueChanged1()"/>
+                  <label for="checkboxG2" class="css-label">I have a URL</label>
+                </div>
+                <div class="provide-url form_info">
+				                	<span class="form_info_icon">
+					                    <img src="common/images/p-url.png" alt="">
+					                 </span>
+                  <input type="text" class="url" placeholder="Provide URL" maxlength="100" name="customUrllink" id="user-url">
+                  <span id="P-url-err1"></span>
+                </div>
+              </div>
+            </div-->
+
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center request-outer">
+              <a href="javascript:void(0);" class="send_your_request" data-style="slide-left" id="submitFrm" title="Send your request. We'll get back within 1 business day.">Send
+                your request. We'll get back within 1 business day.</a>
+
+            </div>
+          </div>
+          <input type="hidden" name="frmOrderFileUploadedfilename" id="frmOrderFileUploadedfilename" value=""/>
+          <input type="hidden" name="_frmOrder" value="frmOrder"/>
+
+          <!--/form-->
+        <% end %>
+
+      </div>
+    </div>
+    <div class="get-support">
+
+    </div>
+  </section>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+  <script type="text/javascript" src="common/js/jquery.knob.js"></script>
+  <script type="text/javascript" src="common/js/jquery.ui.widget.js"></script>
+  <script type="text/javascript" src="common/js/jquery.fileupload.js"></script>
+  <script type="text/javascript" src="common/js/scriptcontact.js"></script>
+  <link rel="stylesheet" type="text/css" href="common/css/style.css"/>
+  <script type="text/javascript">
+
+      (function (e, t, n) {
+          var r = e.querySelectorAll("html")[0];
+          r.className = r.className.replace(/(^|\s)no-js(\s|$)/, "$1js$2")
+      })(document, window, 0);
+
+
+      'use strict';
+
+      ;(function (document, window, index) {
+          var inputs = document.querySelectorAll('.inputfile');
+          Array.prototype.forEach.call(inputs, function (input) {
+              var label = input.nextElementSibling,
+                  labelVal = label.innerHTML;
+
+              input.addEventListener('change', function (e) {
+                  var fileName = '';
+                  if (this.files && this.files.length > 1)
+                      fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+                  else
+                      fileName = e.target.value.split('\\').pop();
+
+                  if (fileName)
+                      label.querySelector('span').innerHTML = fileName;
+                  else
+                      label.innerHTML = labelVal;
+              });
+
+              // Firefox bug fix
+              input.addEventListener('focus', function () {
+                  input.classList.add('has-focus');
+              });
+              input.addEventListener('blur', function () {
+                  input.classList.remove('has-focus');
+              });
+          });
+      }(document, window, 0));
+
+
+  </script>
+</section>

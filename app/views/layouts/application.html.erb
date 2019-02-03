@@ -1,148 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" class="demo-loading no-js" ng-app="App">
-<head>
-  <meta charset="utf-8">
-  <meta name="language" content="English"/>
-  <!-- DO NOT MODIFY -->
-  <!-- Quora Pixel Code (JS Helper) -->
-  <!-- End of Quora Pixel Code -->
-  <!--create url for ie9,10 redirection on 404 not found-->
-  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
-  <%if @demo %>
+<html>
+  <head>
+    <title><%=full_title(yield(:title))%></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= render 'layouts/shim' %>
-  <% else %>
-    <base href="/www.webmobile.com/">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>IT Outsourcing Developer - Outsource Software Development Services</title>
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
-    <!-- Open Graph -->
-    <meta property="og:title" content="IT Outsourcing Developer - Outsource Software Development Services"/>
-    <meta property="og:image" content="common/images/dsd.jpg"/>
-    <meta property="og:url" content=""/>
-    <meta property="og:type" content="Home Page"/>
+  </head>
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="Expert Remote Teams For Your Software development Needs">
-    <meta name="twitter:url" content="">
-    <meta name="twitter:title" content="IT Outsourcing Developer - Outsource Software Development Services">
-    <meta name="twitter:image" content="common/images/dsd.jpg">
-    <link rel="stylesheet" type="text/css" href="common/css/cmnCss.css?v6"/>
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">-->
-    <link rel="stylesheet" type="text/css" href="common/fonts/font.css"/>
-    <!--<link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'/>-->
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,400italic,700italic,300italic,100italic,100' rel='stylesheet' type='text/css'>
-    <!--<link rel="stylesheet" type="text/css" href="common/css/jquery.rateyo.min.css" />
-    <link rel="stylesheet" type="text/css" href="common/css/rating.css" />
-    <link rel="stylesheet" type="text/css" href="common/css/mytab.css" />-->
-    <script type="text/javascript" src="common/js/jsLib.min.js"></script>
-    <style>
-      /* This only works with JavaScript,
-                     if it's not present, don't show loader */
-      /*#loader { display: none;  }*/
-      .js #loader {
-        display: block;
-        position: absolute;
-        left: 100px;
-        top: 0;
-      }
+  <body>
+    <%= render 'layouts/header' %>
+    <div class="container">
 
-
-      .fixed a.logo img {
-        width: 240px;
-        height: auto;
-      }
-    </style>
-
-
-    <!--<link rel="stylesheet" type="text/css" href="common/css/datepicker.css"/> -->
-
-    <link rel="shortcut icon" href="/common/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/common/images/favicon.ico" type="image/x-icon">
-    <!-- Facebook Pixel Code -->
-    <script>
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '2095923350635817');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-                   src="https://www.facebook.com/tr?id=2095923350635817&ev=PageView&noscript=1"
-      /></noscript>
-    <!-- End Facebook Pixel Code -->
-
-
-    <!-- Global site tag (gtag.js) - Google Ads: 798743845 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-798743845"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-
-        gtag('config', 'AW-798743845');
-    </script>
-    <!-- Global site tag (gtag.js) - Google Ads: 1013624786 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1013624786"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-
-        gtag('config', 'AW-1013624786');
-    </script>
-
-
-    <link rel="canonical" href=""/>
-  <% end %>
-</head>
-<body>
-
-<% if @demo %>
-  <%= yield %>
-<% else %>
-  <script>fbq('track', 'Lead');</script>
-  <div class="outer_layout">
-    <div class="outer_wrapper_new">
-
-      <!-- <div class="christmas_banner"><img src="common/images/Christmas-Banner-VC.gif" alt="Hire Dedicated Developers - Logo" /></div>-->
-
-      <%= render 'layouts/header' %>
       <%= yield %>
 
+      <% render 'layouts/footer' %>
+
+      <%= debug(params) if Rails.env.development? %>
     </div>
-
-  </div>
-
-  <%= render 'layouts/footer' %>
-<% end %>
-
-</body>
+  </body>
 </html>
-
-

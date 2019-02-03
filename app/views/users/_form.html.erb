@@ -1,23 +1,49 @@
-<h1>Sign up</h1>
+<h1 class="text-center">Signup Form</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
+    <%= form_for(@user, url: signup_path) do |f| %>
       <%= render 'shared/error_messages' %>
 
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-
       <%= f.label :email %>
-      <%= f.email_field :email %>
+      <%= f.email_field :email, class: 'form-control ' %>
 
       <%= f.label :password %>
-      <%= f.password_field :password %>
+      <%= f.password_field :password, class: 'form-control ' %>
 
       <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation %>
+      <%= f.password_field :password_confirmation, class: 'form-control ' %>
 
+      <%
+      options_prefix = {
+          "": "",
+          "617": "617",
+          "970": "970"
+      }
+      options_number = {
+          "": "",
+          "934-5175": "934-5175",
+          "366-4458": "366-4458"
+      }
+      %>
+
+      <div class="container-fluid">
+        <div class="row">
+          <h4>Select a U.S. phone number</h4>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-md-6 list-group">
+            <%= f.label :prefix, "Prefix" %>
+            <%= f.select :prefix, options_for_select(options_prefix),{}, {class: 'form-control'} %>
+          </div>
+          <div class="col-sm-6 col-md-6 list-group" style="padding-right: 0;">
+            <%= f.label :number, "Phone number" %>
+            <%= f.select :number, options_for_select(options_number),{}, {class: 'form-control'} %>
+          </div>
+        </div>
+      </div>
       <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
+
