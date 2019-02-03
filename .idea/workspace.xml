@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1409e70b-4cf7-4890-bb4b-ad373c85454a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/twilios.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/twilios.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/twilio_histories/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/twilio_histories/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -23,8 +24,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/twilio_histories/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+            <state relative-caret-position="285">
+              <caret line="19" column="55" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
+              <folding>
+                <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -34,6 +41,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Mike Jones</find>
+      <find>Form</find>
+      <find>from</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -44,6 +53,7 @@
       <list>
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/twilios.scss" />
         <option value="$PROJECT_DIR$/app/views/twilio_histories/index.html.erb" />
       </list>
     </option>
@@ -71,6 +81,19 @@
               <item name="twilio-dm" type="b2602c69:ProjectViewProjectNode" />
               <item name="twilio-dm" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="twilio-dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="twilio-dm" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="twilio-dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="twilio-dm" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="twilio-dm" type="b2602c69:ProjectViewProjectNode" />
@@ -225,12 +248,12 @@
       <option name="presentableId" value="Default" />
       <updated>1549156235239</updated>
       <workItem from="1549156237118" duration="1659000" />
-      <workItem from="1549160932811" duration="81000" />
+      <workItem from="1549160932811" duration="1346000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1740000" />
+    <option name="totallyTimeSpent" value="3005000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1024" height="687" extended-state="0" />
@@ -275,10 +298,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/twilios.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/twilio_histories/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+        <state relative-caret-position="285">
+          <caret line="19" column="55" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
+          <folding>
+            <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
