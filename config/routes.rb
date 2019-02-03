@@ -56,8 +56,9 @@ Rails.application.routes.draw do
   resources :contacts
   resources :gmaps
   resources :twilio_histories
+  resources :messages
 
 
   #root "static_pages#home"
-  root "twilio_histories#iframe"
+  root "static_pages#home"
 end

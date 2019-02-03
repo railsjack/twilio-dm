@@ -1,0 +1,72 @@
+<p id="notice"><%= notice %></p>
+
+<p><%= link_to 'Back to Inbox', messages_path %></p>
+
+<p>
+  <strong>Viewing message from <%= humanize_phone_number(@last_message.from)  %></strong>
+</p>
+
+<table class="table table-bordered">
+  <tr>
+    <td>
+      From:
+      <% if current_user.phone_number == @last_message.from %>
+        You <br>
+      <% else %>
+        <%=humanize_phone_number(@last_message.from) %> <br>
+      <% end %>
+      <%=humanize_datetime(@last_message.created_at) %>
+    </td>
+    <td>
+      <%=@last_message.content %>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>
+      <%=form_for :message, url: messages_path do |f| %>
+      <table class="table">
+        <tr>
+          <td width="30%">
+            Your Message:<br>
+            <!--input type="button" value="Send Message" /-->
+            <%=f.submit "Send Message" %>
+          </td>
+          <td width="70%">
+            <!--textarea rows="5"></textarea-->
+            <% if @last_message.from == current_user.phone_number %>
+              <%=f.hidden_field :from, value: current_user.phone_number %>
+              <%=f.hidden_field :to, value: @last_message.to %>
+            <% else %>
+              <%=f.hidden_field :from, value: current_user.phone_number %>
+              <%=f.hidden_field :to, value: @last_message.from %>
+            <% end %>
+            <%=f.text_area :content, value: '' %>
+          </td>
+        </tr>
+      </table>
+      <% end %>
+    </td>
+  </tr>
+</table>
+
+<h3>Previous messages</h3>
+<table class="table table-bordered">
+  <% @previous_messages.each do |message| %>
+    <tr>
+      <td>
+        From:
+        <% if current_user.phone_number == message.from %>
+          You <br>
+        <% else %>
+          <%=humanize_phone_number(message.from) %> <br>
+        <% end %>
+        <%=humanize_datetime(message.created_at) %>
+      </td>
+      <td>
+        <%=message.content %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+

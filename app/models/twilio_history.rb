@@ -14,6 +14,7 @@ class TwilioHistory < ApplicationRecord
                     .create(
                         body: self.body,
                         from: '+16179345175',
+                        #from: self.from,
                         to: self.to
                     )
       self.sid = message.sid

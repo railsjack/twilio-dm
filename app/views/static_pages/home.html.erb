@@ -1,16 +1,15 @@
 <% provide(:title, "Home") %>
-<h1>Sample App</h1>
+<p><br></p>
 <div class="center jumbotron">
-  <h1>Welcome to the Sample App</h1>
-
-  <h2>
-    This is the home page for the
-    <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-    sample application.
-  </h2>
-
+  <h2>Welcome to the Simpe Message App</h2>
+  <div class="well well-sm">
+    <h4 class="text-center"><a target="_blank" href="https://www.screencast.com/t/EsaeqlI4e">
+      How does it work (Signup / Signin)</a>
+    </h4>
+    <h4 class="text-center"><a target="_blank" href="https://www.screencast.com/t/VZnzUDEU">
+      How does it work (Send SMS)</a></h4>
+    <h4 class="text-center"><a target="_blank" href="https://www.screencast.com/t/mgab8CTX">
+      How does it work (Setting up Webhook in order to capture incoming messages)</a></h4>
+  </div>
   <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
 </div>
-
-<%= link_to image_tag("rails.png", alt: "Rails logo"),
-            'http://rubyonrails.org/' %>

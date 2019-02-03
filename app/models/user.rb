@@ -16,7 +16,7 @@ class User < ApplicationRecord
   validates :number, presence: true
 
   def phone_number
-    prefix+number.remove("-")
+    "1"+prefix+number.remove("-")
   end
 
 end

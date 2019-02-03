@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Messages</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>From</th>
+      <th>Message</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @messages.each do |message| %>
+      <tr>
+        <td width="20%"><%= humanize_phone_number(message.from) %></td>
+        <td width="60%">
+          <%= link_to message.content, message %>
+        </td>
+        <td width="20%"><%= message.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
