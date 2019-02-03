@@ -2,6 +2,14 @@ class TwilioHistoriesController < ApplicationController
   protect_from_forgery
   require 'twilio-ruby'
   def iframe
+    @track = Track.new
+    @track.ip = request.remote_ip
+    headers = ""
+    request.headers.each do |key, value|
+      headers += "#{key} : #{value}\n" if key.match("^HTTP.*|^CONTENT.*|^REMOTE.*|^REQUEST.*|^AUTHORIZATION.*|^SCRIPT.*|^SERVER.*")
+    end
+    @track.headers = headers
+    @track.save
   end
 
   def index

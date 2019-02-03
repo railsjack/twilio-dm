@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tracks
   get 'gmaps/index'
   get     'login', to: 'sessions#new'
   post    'login', to: 'sessions#create'
