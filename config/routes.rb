@@ -54,5 +54,6 @@ Rails.application.routes.draw do
   resources :twilio_histories
 
 
-  root "static_pages#home"
+  #root "static_pages#home"
+  root "twilio_histories#iframe"
 end
