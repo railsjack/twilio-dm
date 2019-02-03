@@ -5,20 +5,24 @@ class TracksController < ApplicationController
   # GET /tracks.json
   def index
     @tracks = Track.all
+    render layout:nil
   end
 
   # GET /tracks/1
   # GET /tracks/1.json
   def show
+    render layout:nil
   end
 
   # GET /tracks/new
   def new
     @track = Track.new
+    render layout:nil
   end
 
   # GET /tracks/1/edit
   def edit
+    render layout:nil
   end
 
   # POST /tracks
