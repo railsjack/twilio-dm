@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1409e70b-4cf7-4890-bb4b-ad373c85454a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/controllers/twilios_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/twilios_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/twilios/recv_sms.xml.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/twilios/recv_sms.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/twilios/recv_sms.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -61,10 +62,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/twilios/recv_sms.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/twilios/recv_sms.xml.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+              <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -247,6 +248,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/twilios" />
       <recent name="$PROJECT_DIR$/app/views" />
       <recent name="$PROJECT_DIR$/app/views/user_mailer" />
       <recent name="$PROJECT_DIR$/app/view" />
@@ -375,12 +377,12 @@
       <workItem from="1549156237118" duration="1659000" />
       <workItem from="1549160932811" duration="28193000" />
       <workItem from="1549224632079" duration="17090000" />
-      <workItem from="1549265714103" duration="9555000" />
+      <workItem from="1549265714103" duration="9756000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56497000" />
+    <option name="totallyTimeSpent" value="56698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1024" height="687" extended-state="0" />
@@ -411,9 +413,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -736,6 +735,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/twilios/recv_sms.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="21" lean-forward="true" selection-end-line="12" selection-end-column="21" />
+          <folding>
+            <element signature="e#143#149#0#HTML" expanded="true" />
+            <element signature="e#149#155#0#HTML" expanded="true" />
+            <element signature="e#155#161#0#HTML" expanded="true" />
+            <element signature="e#161#167#0#HTML" expanded="true" />
+            <element signature="e#167#173#0#HTML" expanded="true" />
+            <element signature="e#173#179#0#HTML" expanded="true" />
+            <element signature="e#179#185#0#HTML" expanded="true" />
+            <element signature="e#185#191#0#HTML" expanded="true" />
+            <element signature="e#191#197#0#HTML" expanded="true" />
+            <element signature="e#197#203#0#HTML" expanded="true" />
+            <element signature="e#203#209#0#HTML" expanded="true" />
+            <element signature="e#209#215#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/sms_mailer/reply.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -743,10 +763,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/twilios/recv_sms.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/twilios/recv_sms.xml.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+          <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
         </state>
       </provider>
     </entry>
