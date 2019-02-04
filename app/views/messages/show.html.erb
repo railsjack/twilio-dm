@@ -41,13 +41,14 @@
           </td>
           <td width="70%">
             <!--textarea rows="5"></textarea-->
+            <%=f.hidden_field :from, value: current_user.phone_number %>
+
             <% if @last_message.from == current_user.phone_number %>
-              <%=f.hidden_field :from, value: current_user.phone_number %>
               <%=f.hidden_field :to, value: @last_message.to %>
             <% else %>
-              <%=f.hidden_field :from, value: current_user.phone_number %>
               <%=f.hidden_field :to, value: @last_message.from %>
             <% end %>
+
             <%=f.text_area :content, value: '' %>
           </td>
         </tr>
