@@ -59,7 +59,7 @@ class TwiliosController < ApplicationController
       sending email: #{@result}
     "
     respond_to do |format|
-      format.html { render layout: nil }
+      format.xml { render layout: nil }
     end
 
   end
