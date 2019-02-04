@@ -6,8 +6,15 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email].downcase)
 
     if user && user.authenticate(params[:session][:password])
-      log_in(user)
-      redirect_to root_path
+      if user.activated?
+        log_in(user)
+        redirect_to root_path
+      else
+        message = "Acccount not activated. "
+        message += "Check your email for the activation link."
+        flash[:warning] = message
+        redirect_to root_url
+      end
     else
       flash[:danger] = 'Invalid email or password combination' # Not quite right!
       render 'new'

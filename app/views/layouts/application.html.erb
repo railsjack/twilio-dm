@@ -12,8 +12,13 @@
 
   <body>
     <%= render 'layouts/header' %>
-    <div class="container">
 
+    <div class="container">
+      <p>&nbsp;</p>
+      <% flash.each do |message_type, message| %>
+        <div onclick="this.style.display='none'"
+          class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
       <%= yield %>
 
       <% render 'layouts/footer' %>

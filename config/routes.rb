@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :tracks
   get 'gmaps/index'
   get     'login', to: 'sessions#new'
   post    'login', to: 'sessions#create'
@@ -57,6 +56,8 @@ Rails.application.routes.draw do
   resources :gmaps
   resources :twilio_histories
   resources :messages
+  resources :tracks
+  resources :account_activations, only: [:edit]
 
 
   #root "static_pages#home"
