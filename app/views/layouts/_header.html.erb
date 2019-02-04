@@ -1,18 +1,95 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <%=link_to 'Home', root_path, id: 'logo' %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <!--li><%=link_to 'Help', help_path %></li>
-        <li><%=link_to 'About', about_path %></li-->
-        <% unless logged_in2? %>
-          <li><%=link_to 'Signup', signup_path %></li>
-          <li><%=link_to 'Log in', login_path %></li>
-        <% else %>
-          <li><%=link_to 'Messages', messages_path %></li>
-          <li><%=link_to 'Log out', logout_path %></li>
-        <% end %>
-      </ul>
-    </nav>
+<style>
+  .header_new .menu_new li .sub_menu_new .hire_devl li a.ionic,
+  .header_new .menu_new li .sub_menu_new .hire_devl li:hover a.ionic {
+    background-position: 0 -2206px;
+    border-bottom: 0 solid #d7d7d7;
+  }
+
+  .site-slogan {
+    color: white;
+    font-size: 20pt !important;
+  }
+
+  @media screen and (max-width: 1280px) {
+    .site-slogan {
+      font-size: 15pt !important;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .site-slogan {
+      font-size: 10pt !important;
+    }
+  }
+
+  @media screen and (max-width: 810px) {
+    .site-slogan {
+      font-size: 10pt !important;
+      line-height: 40px !important;
+      display: block !important;
+      /* float: left; */
+      height: 40px !important;
+      float: none!important;
+    }
+    .header_new .menu_new .hire_dvl_list{
+      margin-left: 0px;
+    }
+    .header_new .menu_new li .sub_menu_new .sub-menu-list li a,
+    .header_new .menu_new li .sub_menu_new .hire_devl li a{
+      background-position-x: -10px!important;
+    }
+    .header_new .menu_new li .sub_menu_new .hire_devl li .laravel,
+    .header_new .menu_new li .sub_menu_new .hire_devl li .ror
+    {
+      background-position-x: 7px!important;
+
+    }
+    .header_new .menu_new{
+      left: 90px!important;
+    }
+  }
+</style>
+<script>
+
+    $(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 500) {
+                $('.logo img').attr('src', '/logo.png?v1');
+            }
+            if ($(this).scrollTop() < 500) {
+                $('.logo img').attr('src', '/logo.png?v1');
+            }
+        });
+    });
+
+</script>
+<header class="header_new navbar navbar-fixed-top navbar-inverse">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-3 col-lg-3 col-md-3">
+        <a href="/" class="logo" title="WebMobile"><img src="/logo.png"
+           width="100%" org-src="common/images/VC-Log-1.png?v1" alt="Dedicated - Logo"/></a>
+        <span class="mob_icon2"></span>
+      </div>
+      <div class="col-xs-12 col-sm-9 col-lg-9 col-md-9">
+        <span class="site-slogan" style="color: white;font-size: 20pt;line-height: 70px;
+            float: left; height: 60px;">
+          Michael Jones's demo app
+        </span>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <!--li><%=link_to 'Help', help_path %></li>
+            <li><%=link_to 'About', about_path %></li-->
+            <% unless logged_in2? %>
+              <li><%=link_to 'Signup', signup_path %></li>
+              <li><%=link_to 'Log in', login_path %></li>
+            <% else %>
+              <li><%=link_to 'Messages', messages_path %></li>
+              <li><%=link_to 'Log out', logout_path %></li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </div>
 </header>

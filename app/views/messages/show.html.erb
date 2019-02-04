@@ -1,12 +1,12 @@
 <p>&nbsp;</p>
 <% unless notice.nil? %>
-  <div class="well well-sm">
+  <div class="well well-sm" onclick="this.style.display='none'">
     <p id="notice"><%= notice %></p>
   </div>
 <% end %>
 
-<p><%= link_to 'Back to Inbox', messages_path %></p>
-
+<%= link_to '< Back to Inbox', messages_path, class: 'btn btn-default' %>
+<p>&nbsp;</p>
 <p>
   <strong>Viewing message from <%= humanize_phone_number(@last_message.from)  %></strong>
 </p>
@@ -25,7 +25,7 @@
     <td>
       <%=@last_message.content %>
       &nbsp;&nbsp;
-      <strong><%= link_to 'Delete', @last_message, method: :delete, class: 'text-danger', data: { confirm: 'Are you sure?' } %></strong>
+      <%= link_to 'Delete', @last_message, method: :delete, class: 'btn btn-xs btn-danger pull-right', data: { confirm: 'Are you sure?' } %>
     </td>
   </tr>
   <tr>
@@ -35,9 +35,9 @@
       <table class="table">
         <tr>
           <td width="30%">
-            Your Message:<br>
+            <%=f.label :content, "Your Message:" %>
             <!--input type="button" value="Send Message" /-->
-            <%=f.submit "Send Message" %>
+            <%=f.submit "Send Message", class: 'btn btn-primary btn-sm' %>
           </td>
           <td width="70%">
             <!--textarea rows="5"></textarea-->
@@ -49,7 +49,7 @@
               <%=f.hidden_field :to, value: @last_message.from %>
             <% end %>
 
-            <%=f.text_area :content, value: '' %>
+            <%=f.text_area :content, value: '', class: 'form-control' %>
           </td>
         </tr>
       </table>
@@ -74,7 +74,7 @@
       <td>
         <%=message.content %>
         &nbsp;&nbsp;
-        <strong><%= link_to 'Delete', message, method: :delete, class: 'text-danger', data: { confirm: 'Are you sure?' } %></strong>
+        <%= link_to 'Delete', message, method: :delete, class: 'pull-right btn btn-xs btn-danger', data: { confirm: 'Are you sure?' } %>
       </td>
     </tr>
   <% end %>

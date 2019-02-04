@@ -1,7 +1,12 @@
+<p>&nbsp;</p>
 <p id="notice"><%= notice %></p>
+<p>&nbsp;</p>
 
-<h1>Messages</h1>
-
+<h3>Welcome <%= humanize_phone_number(current_user.phone_number) %></h3>
+<br>
+<h5>You have <%=@messages.count %> new messages.</h5>
+<p>&nbsp;</p>
+<h4>New Messages:</h4>
 <table class="table table-bordered">
   <thead>
     <tr>
