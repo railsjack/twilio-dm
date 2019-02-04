@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1409e70b-4cf7-4890-bb4b-ad373c85454a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/controllers/twilios_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/twilios_controller.rb" afterDir="false" />
-    </list>
+    <list default="true" id="1409e70b-4cf7-4890-bb4b-ad373c85454a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/log/" />
@@ -192,13 +190,6 @@
               <item name="twilio-dm" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="static_pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="twilio-dm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="twilio-dm" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="twilios" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -206,7 +197,7 @@
               <item name="twilio-dm" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="user_mailer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="twilio-dm" type="b2602c69:ProjectViewProjectNode" />
@@ -219,7 +210,7 @@
               <item name="twilio-dm" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views(new)" type="462c0819:PsiDirectoryNode" />
-              <item name="twilios" type="462c0819:PsiDirectoryNode" />
+              <item name="user_mailer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="twilio-dm" type="b2602c69:ProjectViewProjectNode" />
@@ -376,16 +367,15 @@
       <workItem from="1549156237118" duration="1659000" />
       <workItem from="1549160932811" duration="28193000" />
       <workItem from="1549224632079" duration="17090000" />
-      <workItem from="1549265714103" duration="9242000" />
+      <workItem from="1549265714103" duration="9346000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56184000" />
+    <option name="totallyTimeSpent" value="56288000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1024" height="687" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35641548" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
