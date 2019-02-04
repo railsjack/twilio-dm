@@ -58,7 +58,9 @@ class TwiliosController < ApplicationController
     @log = "Started
       sending email: #{@result}
     "
-    render layout: nil
+    respond_to do |format|
+      format.html { render layout: nil }
+    end
 
   end
 
