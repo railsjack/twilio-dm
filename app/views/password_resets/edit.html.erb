@@ -1,0 +1,27 @@
+<h3 class="text-center">Password reset</h3>
+<p><br></p>
+<div class="container">
+  <div class="row">
+    <div class="
+      col-md-6 col-md-offset-3
+      col-lg-4 col-lg-offset-4
+      ">
+      <%=form_for @user, url: password_reset_path(params[:id], email:params[:email]) do |f| %>
+
+        <%= render 'shared/error_messages' %>
+
+        <%=hidden_field_tag :email, @user.email %>
+        <%=f.label :password %>
+        <%=f.password_field :password, class: 'form-control' %>
+
+        <%=f.label :password_confirmation %>
+        <%=f.password_field :password_confirmation, class: 'form-control' %>
+
+        <%=f.submit "Reset Password", class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+

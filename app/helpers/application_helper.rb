@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def full_title(title = '')
-    base_title = "Portfolio"
+    base_title = "Simple Message App"
     if title.empty?
       base_title
     else
